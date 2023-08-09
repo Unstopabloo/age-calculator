@@ -136,7 +136,15 @@ body {
     width: 4.5rem;
   }
 
+  .submit {
+    right: 40%;
+  }
+
   .age {
     font-size: 3.5rem;
+  }
+
+  .age-section {
+    padding-top: 2rem;
   }
 }
