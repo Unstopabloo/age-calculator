@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
+:root {
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --supporter: hsl(0, 0%, 86%);
+  --secondary: hsl(0, 1%, 44%);
+  --dark: hsl(0, 0%, 8%);
+  --primary: hsl(259, 100%, 65%);
+  --warning: hsl(0, 100%, 67%);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--off-white);
+}
+
+.primary {
+  background-color: var(--white);
+  border-radius: 1.5rem 1.5rem 8rem 1.5rem;
+  padding: 3rem;
+}
+
+#birthday {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  row-gap: 4rem;
+  padding: 0 5rem 0 0;
+}
+
+.birthday-block {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.date-type {
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.date-input::-webkit-inner-spin-button,
+.date-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.date-input {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  padding: 0.8rem 1rem;
+  font-size: 2rem;
+  color: var(--secondary);
+  font-weight: 600;
+  width: 8rem;
+  border: 1px solid var(--supporter);
+  border-radius: 5px;
+}
+
+.border {
+  width: 100%;
+  height: 3px;
+  background-color: var(--supporter);
+  position: relative;
+  margin: 1em 0;
+}
+
+.submit {
+  border-radius: 50%;
+  border: none;
+  background-color: var(--primary);
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  right: 0%;
+  top: -3rem;
+  cursor: pointer;
+}
+
+.submit::acive,
+.submit:hover {
+  background-color: var(--dark);
+}
+
+.error {
+  color: var(--warning);
+}
+
+#dayError,
+#monthError,
+#yearError {
+  padding-top: 0.3rem;
+  color: var(--warning);
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.age-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.age {
+  font-size: 6.5rem;
+  font-weight: 800;
+  line-height: 0rem;
+  font-style: italic;
+  margin: 3.5rem 0;
+}
+
+.number {
+  color: var(--primary);
+}
+
+@media screen and (max-width: 550px) {
+  #birthday {
+    gap: 3rem;
+  }
+
+  .birthday-block {
+    width: 20%;
+  }
+
+  .date-input {
+    width: 4.5rem;
+  }
+
+  .age {
+    font-size: 5rem;
+  }
+}

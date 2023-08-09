@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.png" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <section class="primary">
+      <form id="birthday" action="get">
+        <div class="birthday-block">
+          <label class="date-type" for="day">Day</label>
+          <input
+            class="date-input"
+            name="day"
+            type="number"
+            id="day"
+            placeholder="DD"
+          />
+          <strong id="dayError"></strong>
+        </div>
+        <div class="birthday-block">
+          <label class="date-type" for="month">Month</label>
+          <input
+            class="date-input"
+            name="month"
+            type="number"
+            id="month"
+            placeholder="MM"
+          />
+          <strong id="monthError"></strong>
+        </div>
+        <div class="birthday-block">
+          <label class="date-type" for="year">Year</label>
+          <input
+            class="date-input"
+            name="year"
+            type="number"
+            id="year"
+            placeholder="YYYY"
+          />
+          <strong id="yearError"></strong>
+        </div>
+        <div class="border">
+          <button class="submit" type="submit" id="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="46"
+              height="44"
+              viewBox="0 0 46 44"
+            >
+              <g fill="none" stroke="#FFF" stroke-width="2">
+                <path
+                  d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <div class="age-section">
+        <h2 class="age">
+          <span class="number" id="display-year">--</span> years
+        </h2>
+        <h2 class="age">
+          <span class="number" id="display-month">--</span> months
+        </h2>
+        <h2 class="age">
+          <span class="number" id="display-day">--</span> days
+        </h2>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
